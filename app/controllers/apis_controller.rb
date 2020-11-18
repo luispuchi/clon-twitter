@@ -1,6 +1,6 @@
 class ApisController < ApplicationController
   skip_before_action :verify_authenticity_token
-  #trate de hacer la autenticacion con token y no me funciona, me resultò la bàsica
+  #intente hacer la autenticacion con token y no me funciona, me resultò la bàsica(borre y hice la app 3veces por problemas con mis gemas)
   def get_last_tweets
   
       if Tweet.all
@@ -22,9 +22,7 @@ class ApisController < ApplicationController
 
   end
 
-
-
-  def date_filter
+     def date_filter
     @from = params[:from]
     @to_date = params[:to]
     @tweets = Tweet.where(created_at:@from.. @to_date) 
